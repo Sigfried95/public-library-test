@@ -1,0 +1,34 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { IonSearchbar, PopoverController } from '@ionic/angular';
+import { SearchBarHttpService } from './search-bar-url.service';
+import * as i0 from "@angular/core";
+export declare class SearchBarComponent implements OnInit {
+    private popoverController;
+    private searchHttpService;
+    placeholder: string;
+    debounce: number;
+    color: string | 'primary' | 'secondary' | 'tertiary' | 'success' | 'warning' | 'danger' | 'white' | 'light';
+    animated: boolean;
+    disabled: boolean;
+    borderRadius: number;
+    showCancelButton: 'always' | 'focus' | 'never';
+    dataElements: any[];
+    nameAttributeSearch: string;
+    urlDataElements: string;
+    showPopover: boolean;
+    searchIcon: string;
+    clearIcon: undefined;
+    cancelIcon: undefined;
+    onSearchText: EventEmitter<string>;
+    onSearchResultItems: EventEmitter<any[]>;
+    onSelectItem: EventEmitter<any>;
+    searchbar: IonSearchbar;
+    searchText: string;
+    constructor(popoverController: PopoverController, searchHttpService: SearchBarHttpService);
+    performSearch(event: any): Promise<void>;
+    ngOnInit(): void;
+    onSearchChange($event: any): void;
+    changeStringSearch(arrayElement: any[], textSearch: string): any[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SearchBarComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SearchBarComponent, "app-search-bar", never, { "placeholder": "Placeholder"; "debounce": "Debounce"; "color": "Color"; "animated": "Animated"; "disabled": "Disabled"; "borderRadius": "BorderRadius"; "showCancelButton": "ShowCancelButton"; "dataElements": "DataElements"; "nameAttributeSearch": "NameAttributeSearch"; "urlDataElements": "UrlDataElements"; "showPopover": "ShowPopover"; "searchIcon": "SearchIcon"; "clearIcon": "ClearIcon"; "cancelIcon": "CancelIcon"; }, { "onSearchText": "onSearchText"; "onSearchResultItems": "onSearchResultItems"; "onSelectItem": "onSelectItem"; }, never, never, false, never>;
+}
